@@ -13,6 +13,12 @@
 		76C964EE1B5850B2001D9E78 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76C964ED1B5850B2001D9E78 /* Images.xcassets */; };
 		76C964F11B5850B2001D9E78 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76C964EF1B5850B2001D9E78 /* LaunchScreen.xib */; };
 		76C964FD1B5850B2001D9E78 /* KFDataStructuresTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C964FC1B5850B2001D9E78 /* KFDataStructuresTests.swift */; };
+		76C965081B5850F1001D9E78 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 76C965061B5850F1001D9E78 /* LICENSE */; };
+		76C965091B5850F1001D9E78 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 76C965071B5850F1001D9E78 /* README.md */; };
+		76C965111B58513B001D9E78 /* KFTreeMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C9650C1B58513B001D9E78 /* KFTreeMap.m */; };
+		76C965121B58513B001D9E78 /* KFHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C9650E1B58513B001D9E78 /* KFHeap.swift */; };
+		76C965131B58513B001D9E78 /* KFQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C9650F1B58513B001D9E78 /* KFQueue.swift */; };
+		76C965141B58513B001D9E78 /* KFTreeMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C965101B58513B001D9E78 /* KFTreeMap.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,13 @@
 		76C964F61B5850B2001D9E78 /* KFDataStructuresTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KFDataStructuresTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C964FB1B5850B2001D9E78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76C964FC1B5850B2001D9E78 /* KFDataStructuresTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFDataStructuresTests.swift; sourceTree = "<group>"; };
+		76C965061B5850F1001D9E78 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		76C965071B5850F1001D9E78 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		76C9650B1B58513B001D9E78 /* KFTreeMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFTreeMap.h; sourceTree = "<group>"; };
+		76C9650C1B58513B001D9E78 /* KFTreeMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFTreeMap.m; sourceTree = "<group>"; };
+		76C9650E1B58513B001D9E78 /* KFHeap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFHeap.swift; sourceTree = "<group>"; };
+		76C9650F1B58513B001D9E78 /* KFQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFQueue.swift; sourceTree = "<group>"; };
+		76C965101B58513B001D9E78 /* KFTreeMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFTreeMap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +92,8 @@
 			children = (
 				76C964E61B5850B2001D9E78 /* AppDelegate.swift */,
 				76C964E81B5850B2001D9E78 /* ViewController.swift */,
+				76C9650A1B58513B001D9E78 /* Objective C */,
+				76C9650D1B58513B001D9E78 /* Swift */,
 				76C964EA1B5850B2001D9E78 /* Main.storyboard */,
 				76C964ED1B5850B2001D9E78 /* Images.xcassets */,
 				76C964EF1B5850B2001D9E78 /* LaunchScreen.xib */,
@@ -90,6 +105,8 @@
 		76C964E41B5850B2001D9E78 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				76C965061B5850F1001D9E78 /* LICENSE */,
+				76C965071B5850F1001D9E78 /* README.md */,
 				76C964E51B5850B2001D9E78 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -110,6 +127,25 @@
 				76C964FB1B5850B2001D9E78 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		76C9650A1B58513B001D9E78 /* Objective C */ = {
+			isa = PBXGroup;
+			children = (
+				76C9650B1B58513B001D9E78 /* KFTreeMap.h */,
+				76C9650C1B58513B001D9E78 /* KFTreeMap.m */,
+			);
+			path = "Objective C";
+			sourceTree = "<group>";
+		};
+		76C9650D1B58513B001D9E78 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				76C9650E1B58513B001D9E78 /* KFHeap.swift */,
+				76C9650F1B58513B001D9E78 /* KFQueue.swift */,
+				76C965101B58513B001D9E78 /* KFTreeMap.swift */,
+			);
+			path = Swift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +230,7 @@
 			files = (
 				76C964EC1B5850B2001D9E78 /* Main.storyboard in Resources */,
 				76C964F11B5850B2001D9E78 /* LaunchScreen.xib in Resources */,
+				76C965081B5850F1001D9E78 /* LICENSE in Resources */,
 				76C964EE1B5850B2001D9E78 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,7 +249,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76C965141B58513B001D9E78 /* KFTreeMap.swift in Sources */,
+				76C965091B5850F1001D9E78 /* README.md in Sources */,
+				76C965121B58513B001D9E78 /* KFHeap.swift in Sources */,
+				76C965111B58513B001D9E78 /* KFTreeMap.m in Sources */,
 				76C964E91B5850B2001D9E78 /* ViewController.swift in Sources */,
+				76C965131B58513B001D9E78 /* KFQueue.swift in Sources */,
 				76C964E71B5850B2001D9E78 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
