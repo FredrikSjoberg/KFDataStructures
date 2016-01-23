@@ -21,7 +21,7 @@ SOFTWARE.
 */
 
 /*
-Modifications by Fredrik Sjöber
+Modifications by Fredrik Sjöberg
 */
 //
 //  KFHeap.swift
