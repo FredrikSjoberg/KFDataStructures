@@ -11,6 +11,12 @@ import Foundation
 public struct Heap<Element: Comparable> {
     public let comparator: (Element, Element) -> Bool
     private var contents: [Element]
+    
+    init(comparator: (Element, Element) -> Bool, contents: [Element]) {
+        self.comparator = comparator
+        self.contents = []
+        contents.forEach{ push($0) }
+    }
 }
 
 extension Heap {
