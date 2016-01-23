@@ -51,7 +51,7 @@ public class KFHeap<T> {
         
         var current = heap.count - 1
         while current > 0 {
-            var parent = (current - 1) >> 1
+            let parent = (current - 1) >> 1
             if compare(heap[parent], heap[current]) {
                 break
             }
