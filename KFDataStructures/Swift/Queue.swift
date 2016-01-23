@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Queue<Element: Comparable> {
+public struct Queue<Element: Equatable> {
     private var contents:[Element]
     
     init() {
