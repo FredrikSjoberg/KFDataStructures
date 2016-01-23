@@ -105,14 +105,14 @@ public class KFHeap<T> {
 
 
 extension KFHeap: GeneratorType {
-    typealias Element = T
+    public typealias Element = T
     public func next() -> Element? {
         return pop()
     }
 }
 
 extension KFHeap: SequenceType {
-    typealias Generator = KFHeap
+    public typealias Generator = KFHeap
     public func generate() -> Generator {
         return self
     }
