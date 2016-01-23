@@ -28,7 +28,7 @@ extension Heap {
             }
             
             swap(&contents[parent], &contents[index])
-            //            (contents[parent], contents[index]) = (contents[index], contents[parent])
+            
             index = parent
         }
     }
