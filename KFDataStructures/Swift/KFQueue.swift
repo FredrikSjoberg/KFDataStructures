@@ -150,7 +150,7 @@ class KFDynamicQueue<T: AnyObject>: KFQueue<T> {
                 head = node
             }
             
-            let q = dequeue()
+            dequeue()
         }
     }
     

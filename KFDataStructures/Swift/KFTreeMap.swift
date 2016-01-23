@@ -120,7 +120,7 @@ class KFTreeNode<T: AnyObject>: Equatable {
     }
     
     var isRoot: Bool {
-        if let parent = self.parent {
+        guard parent == nil else {
             return false
         }
         return true
@@ -179,10 +179,10 @@ class KFTreeNode<T: AnyObject>: Equatable {
     }
     
     func contains(key: T) -> Bool {
-        if let node = findNode(key) {
-            return true
+        guard findNode(key) != nil else {
+            return false
         }
-        return false
+        return true
     }
 }
 
