@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76428A5D1C5419190090C8A6 /* Heap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76428A5C1C5419190090C8A6 /* Heap.swift */; };
+		76428A5F1C5419400090C8A6 /* HeapType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76428A5E1C5419400090C8A6 /* HeapType.swift */; };
+		76428A611C54195E0090C8A6 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76428A601C54195E0090C8A6 /* Queue.swift */; };
+		76428A631C5419710090C8A6 /* QueueType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76428A621C5419710090C8A6 /* QueueType.swift */; };
+		76428A651C5419840090C8A6 /* UniqueQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76428A641C5419840090C8A6 /* UniqueQueue.swift */; };
 		76C964E71B5850B2001D9E78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C964E61B5850B2001D9E78 /* AppDelegate.swift */; };
 		76C964E91B5850B2001D9E78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C964E81B5850B2001D9E78 /* ViewController.swift */; };
 		76C964EC1B5850B2001D9E78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76C964EA1B5850B2001D9E78 /* Main.storyboard */; };
@@ -16,8 +21,6 @@
 		76C965081B5850F1001D9E78 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 76C965061B5850F1001D9E78 /* LICENSE */; };
 		76C965091B5850F1001D9E78 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 76C965071B5850F1001D9E78 /* README.md */; };
 		76C965111B58513B001D9E78 /* KFTreeMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C9650C1B58513B001D9E78 /* KFTreeMap.m */; };
-		76C965121B58513B001D9E78 /* KFHeap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C9650E1B58513B001D9E78 /* KFHeap.swift */; };
-		76C965131B58513B001D9E78 /* KFQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C9650F1B58513B001D9E78 /* KFQueue.swift */; };
 		76C965141B58513B001D9E78 /* KFTreeMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C965101B58513B001D9E78 /* KFTreeMap.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +35,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		76428A5C1C5419190090C8A6 /* Heap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heap.swift; sourceTree = "<group>"; };
+		76428A5E1C5419400090C8A6 /* HeapType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeapType.swift; sourceTree = "<group>"; };
+		76428A601C54195E0090C8A6 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		76428A621C5419710090C8A6 /* QueueType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueType.swift; sourceTree = "<group>"; };
+		76428A641C5419840090C8A6 /* UniqueQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniqueQueue.swift; sourceTree = "<group>"; };
 		76C964E11B5850B2001D9E78 /* KFDataStructures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KFDataStructures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C964E51B5850B2001D9E78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76C964E61B5850B2001D9E78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,8 +54,6 @@
 		76C965071B5850F1001D9E78 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		76C9650B1B58513B001D9E78 /* KFTreeMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFTreeMap.h; sourceTree = "<group>"; };
 		76C9650C1B58513B001D9E78 /* KFTreeMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KFTreeMap.m; sourceTree = "<group>"; };
-		76C9650E1B58513B001D9E78 /* KFHeap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFHeap.swift; sourceTree = "<group>"; };
-		76C9650F1B58513B001D9E78 /* KFQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFQueue.swift; sourceTree = "<group>"; };
 		76C965101B58513B001D9E78 /* KFTreeMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KFTreeMap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,9 +147,12 @@
 		76C9650D1B58513B001D9E78 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
-				76C9650E1B58513B001D9E78 /* KFHeap.swift */,
-				76C9650F1B58513B001D9E78 /* KFQueue.swift */,
 				76C965101B58513B001D9E78 /* KFTreeMap.swift */,
+				76428A5C1C5419190090C8A6 /* Heap.swift */,
+				76428A5E1C5419400090C8A6 /* HeapType.swift */,
+				76428A601C54195E0090C8A6 /* Queue.swift */,
+				76428A621C5419710090C8A6 /* QueueType.swift */,
+				76428A641C5419840090C8A6 /* UniqueQueue.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -253,11 +262,14 @@
 			files = (
 				76C965141B58513B001D9E78 /* KFTreeMap.swift in Sources */,
 				76C965091B5850F1001D9E78 /* README.md in Sources */,
-				76C965121B58513B001D9E78 /* KFHeap.swift in Sources */,
+				76428A631C5419710090C8A6 /* QueueType.swift in Sources */,
+				76428A5D1C5419190090C8A6 /* Heap.swift in Sources */,
 				76C965111B58513B001D9E78 /* KFTreeMap.m in Sources */,
+				76428A611C54195E0090C8A6 /* Queue.swift in Sources */,
 				76C964E91B5850B2001D9E78 /* ViewController.swift in Sources */,
-				76C965131B58513B001D9E78 /* KFQueue.swift in Sources */,
+				76428A651C5419840090C8A6 /* UniqueQueue.swift in Sources */,
 				76C964E71B5850B2001D9E78 /* AppDelegate.swift in Sources */,
+				76428A5F1C5419400090C8A6 /* HeapType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
