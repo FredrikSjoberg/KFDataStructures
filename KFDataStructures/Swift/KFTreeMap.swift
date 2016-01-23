@@ -66,7 +66,7 @@ class KFTreeMap<T: AnyObject> {
                 else {
                     // Root node
                     if node.isLeaf {
-                        if let index = find(trees, node) {
+                        if let index = trees.indexOf(node) {
                             trees.removeAtIndex(index)
                             keys.removeObject(key)
                         }
@@ -136,7 +136,7 @@ class KFTreeNode<T: AnyObject>: Equatable {
     
     func removeChild(leaf: KFTreeNode<T>) -> Bool {
         if leaf.isLeaf {
-            if let index = find(children, leaf) {
+            if let index = children.indexOf(leaf) {
                 children.removeAtIndex(index)
                 return true
             }
@@ -204,7 +204,7 @@ class KFTreePath<T> {
         self.previous = previous
     }
     
-    func extend(#forward: Bool, key: T) {
+    func extend(forward forward: Bool, key: T) {
         if forward {
             let current = destination
             let next = KFTreePath(key: key, next: nil, previous: current)
@@ -229,7 +229,7 @@ class KFTreePath<T> {
         return result
     }
     
-    func slice(#forward: Bool, end: (T) -> Bool) -> KFTreePath<T>? {
+    func slice(forward forward: Bool, end: (T) -> Bool) -> KFTreePath<T>? {
         if let destination = step(forward: forward, end: end) {
             let first = KFTreePath(key: self.key, next: nil, previous: nil)
             var previous = first
@@ -252,7 +252,7 @@ class KFTreePath<T> {
         return nil
     }
     
-    func step(#forward: Bool, end: (T) -> Bool) -> KFTreePath<T>? {
+    func step(forward forward: Bool, end: (T) -> Bool) -> KFTreePath<T>? {
         if end(self.key) {
             return self
         }
@@ -314,11 +314,11 @@ class KFTreePath<T> {
 
 // MARK: SequenceType
 extension KFTreePath: SequenceType {
-    typealias Generator = GeneratorOf<T>
+    typealias Generator = AnyGenerator<T>
     
     func generate() -> Generator {
         var current = self
-        return GeneratorOf {
+        return anyGenerator {
             if let next = current.next {
                 current = next
                 return current.key

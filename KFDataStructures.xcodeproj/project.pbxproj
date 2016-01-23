@@ -192,6 +192,8 @@
 		76C964D91B5850B2001D9E78 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Fredrik Sjoberg";
 				TargetAttributes = {
@@ -453,6 +455,7 @@
 				76C965021B5850B2001D9E78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		76C965031B5850B2001D9E78 /* Build configuration list for PBXNativeTarget "KFDataStructuresTests" */ = {
 			isa = XCConfigurationList;
@@ -461,6 +464,7 @@
 				76C965051B5850B2001D9E78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
