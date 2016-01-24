@@ -32,6 +32,13 @@ public class Lineage<Element: Hashable> {
         return parent == nil ? true : false
     }
     
+    func contains(element: Element) -> Bool {
+        guard node(element) != nil else {
+            return false
+        }
+        return true
+    }
+    
     func link(parent: Element, child: Element) {
         guard let node = node(parent) else { return }
         node.children.insert(Lineage(element: child, parent: node))
