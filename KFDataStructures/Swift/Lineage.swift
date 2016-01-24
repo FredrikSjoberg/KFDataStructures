@@ -56,10 +56,9 @@ public class Lineage<Element: Hashable> {
     /// Truncates 'element' if it is a leaf
     func prune(element: Element) -> Element? {
         guard let node = node(element) else { return nil }
-        if !node.isLeaf { return nil }
+        guard node.isLeaf else { return nil }
         node.parent?.children.remove(node)
         node.parent = nil
-        node.children.removeAll()
         
         return node.element
     }
