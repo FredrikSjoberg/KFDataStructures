@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Heap<Element: Comparable> {
+public struct Heap<Element: Equatable> {
     public let comparator: (Element, Element) -> Bool
     private var contents: [Element]
     
@@ -77,30 +77,6 @@ extension Heap : QueueType {
 }
 
 extension Heap : HeapType { }
-
-/*
-extension Heap : CollectionType, Indexable, SequenceType {
-public var startIndex: Int {
-return contents.startIndex
-}
-
-public var endIndex: Int {
-return contents.endIndex
-}
-
-public subscript(index: Int) -> Element {
-return contents[index]
-}
-}*/
-
-extension Heap : ArrayLiteralConvertible {
-    /// Initializes a minHeap
-    public init(arrayLiteral elements: Element...) {
-        comparator = { $0 < $1 }
-        contents = []
-        elements.forEach{ push($0) }
-    }
-}
 
 extension Heap : CustomStringConvertible, CustomDebugStringConvertible {
     public var description: String { return contents.description }
