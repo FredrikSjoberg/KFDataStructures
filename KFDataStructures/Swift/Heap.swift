@@ -12,6 +12,11 @@ public struct Heap<Element: Equatable> {
     public let comparator: (Element, Element) -> Bool
     private var contents: [Element]
     
+    init(comparator: (Element, Element) -> Bool) {
+        self.comparator = comparator
+        contents = []
+    }
+    
     init(comparator: (Element, Element) -> Bool, contents: [Element]) {
         self.comparator = comparator
         self.contents = []
