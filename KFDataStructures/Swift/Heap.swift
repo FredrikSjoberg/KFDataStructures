@@ -16,6 +16,10 @@ public struct Heap<Element: Equatable> {
         return contents.isEmpty
     }
     
+    func contains(element: Element) -> Bool {
+        return contents.contains(element)
+    }
+    
     init(comparator: (Element, Element) -> Bool) {
         self.comparator = comparator
         contents = []
