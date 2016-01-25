@@ -14,6 +14,10 @@ public struct Queue<Element: Equatable> {
     init() {
         contents = []
     }
+    
+    init(elements: [Element]) {
+        contents = elements
+    }
 }
 
 extension Queue : DynamicQueueType {
