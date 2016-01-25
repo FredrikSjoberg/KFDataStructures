@@ -70,6 +70,7 @@ public class Lineage<Element: Hashable> {
         return node.element
     }
     
+    /// Path is from 'element' -> 'root'
     func rootPath(element: Element) -> [Element] {
         guard let node = node(element) else { return [] }
         if node.isOrigin { return [node.element] }
