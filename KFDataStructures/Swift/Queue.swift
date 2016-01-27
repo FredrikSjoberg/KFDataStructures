@@ -18,6 +18,14 @@ public struct Queue<Element: Equatable> {
     init(elements: [Element]) {
         contents = elements
     }
+    
+    public var isEmpty: Bool {
+        return contents.isEmpty
+    }
+    
+    public var count: Int {
+        return contents.count
+    }
 }
 
 extension Queue : DynamicQueueType {
