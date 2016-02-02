@@ -66,7 +66,7 @@ extension Heap {
     }
 }
 
-extension Heap : QueueType {
+extension Heap : DynamicQueueType {
     public mutating func push(element: Element) {
         contents.append(element)
         
@@ -86,6 +86,14 @@ extension Heap : QueueType {
     
     public func peek() -> Element? {
         return contents.first
+    }
+    
+    mutating public func invalidate(element: Element) {
+        guard !contents.isEmpty else { return }
+        guard let index = contents.indexOf(element) else { return }
+        swap(&contents[index], &contents[contents.endIndex - 1])
+        contents.removeLast()
+        sinkHeap(index)
     }
 }
 
