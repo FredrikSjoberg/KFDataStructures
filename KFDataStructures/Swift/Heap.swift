@@ -91,7 +91,13 @@ extension Heap : DynamicQueueType {
     mutating public func invalidate(element: Element) {
         guard !contents.isEmpty else { return }
         guard let index = contents.indexOf(element) else { return }
-        swap(&contents[index], &contents[contents.endIndex - 1])
+        let endIndex = contents.endIndex - 1
+        guard index != endIndex else {
+            // Bugfix! fatal error: swapping a location with itself is not supported
+            contents.removeLast()
+            return
+        }
+        swap(&contents[index], &contents[endIndex])
         contents.removeLast()
         sinkHeap(index)
     }
