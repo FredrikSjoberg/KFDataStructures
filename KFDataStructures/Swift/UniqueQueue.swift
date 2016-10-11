@@ -9,11 +9,11 @@
 import Foundation
 
 public struct UniqueQueue<Element: Hashable> {
-    private var contents:[Element]
-    private var uniques: Set<Element>
+    fileprivate var contents:[Element]
+    fileprivate var uniques: Set<Element>
     
     
-    init() {
+    public init() {
         contents = []
         uniques = Set()
     }
@@ -36,8 +36,8 @@ extension UniqueQueue : DynamicQueueType {
     
     public mutating func invalidate(element: Element) {
         guard !contents.isEmpty else { return }
-        guard let index = contents.indexOf(element) else { return }
-        contents.removeAtIndex(index)
+        guard let index = contents.index(of: element) else { return }
+        contents.remove(at: index)
         uniques.remove(element)
     }
     
@@ -47,7 +47,7 @@ extension UniqueQueue : DynamicQueueType {
 }
 
 
-extension UniqueQueue : CollectionType, Indexable, SequenceType {
+extension UniqueQueue : Collection {
     public var startIndex: Int {
         return contents.startIndex
     }
@@ -59,10 +59,14 @@ extension UniqueQueue : CollectionType, Indexable, SequenceType {
     public subscript(index: Int) -> Element {
         return contents[index]
     }
+    
+    public func index(after i: Int) -> Int {
+        return i + 1
+    }
 }
 
 
-extension UniqueQueue : ArrayLiteralConvertible {
+extension UniqueQueue : ExpressibleByArrayLiteral {
     public init(arrayLiteral elements: Element...) {
         uniques = Set(elements)
         contents = []

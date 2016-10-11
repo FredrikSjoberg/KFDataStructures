@@ -9,13 +9,13 @@
 import Foundation
 
 public struct Queue<Element: Equatable> {
-    private var contents:[Element]
+    fileprivate var contents:[Element]
     
-    init() {
+    public init() {
         contents = []
     }
     
-    init(elements: [Element]) {
+    public init(elements: [Element]) {
         contents = elements
     }
     
@@ -40,8 +40,8 @@ extension Queue : DynamicQueueType {
     
     public mutating func invalidate(element: Element) {
         guard !contents.isEmpty else { return }
-        guard let index = contents.indexOf(element) else { return }
-        contents.removeAtIndex(index)
+        guard let index = contents.index(of: element) else { return }
+        contents.remove(at: index)
     }
     
     public func peek() -> Element? {
@@ -49,7 +49,7 @@ extension Queue : DynamicQueueType {
     }
 }
 
-extension Queue : CollectionType, Indexable, SequenceType {
+extension Queue : Collection {
     public var startIndex: Int {
         return contents.startIndex
     }
@@ -61,9 +61,19 @@ extension Queue : CollectionType, Indexable, SequenceType {
     public subscript(index: Int) -> Element {
         return contents[index]
     }
+    
+    public func index(after i: Int) -> Int {
+        return i + 1
+    }
+    
+   /* /// Replaces the given index with its successor.
+    ///
+    /// - Parameter i: A valid index of the collection. `i` must be less than
+    ///   `endIndex`.
+    public func formIndex(after i: inout Self.Index)*/
 }
 
-extension Queue : ArrayLiteralConvertible {
+extension Queue : ExpressibleByArrayLiteral {
     public init(arrayLiteral elements: Element...) {
         contents = elements
     }

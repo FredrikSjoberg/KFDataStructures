@@ -33,25 +33,25 @@ public class Lineage<Element: Hashable> {
     }
     
     func contains(element: Element) -> Bool {
-        guard node(element) != nil else {
+        guard node(for: element) != nil else {
             return false
         }
         return true
     }
     
     func link(parent: Element, child: Element) {
-        guard let node = node(parent) else { return }
+        guard let node = node(for: parent) else { return }
         node.children.insert(Lineage(element: child, parent: node))
     }
     
     /// Removes 'element' from the Lineage
     /// If 'repair' == true, transfers all children of 'element' to 'element.parent
     func unlink(element: Element, repair: Bool = false) -> Element? {
-        guard let node = node(element) else { return nil }
+        guard let node = node(for: element) else { return nil }
         node.parent?.children.remove(node)
         
         if repair {
-            node.parent?.children.unionInPlace(node.children)
+            node.parent?.children.formUnion(node.children)
             node.children.forEach{ $0.parent = node.parent }
         }
         else { node.children.removeAll() }
@@ -62,7 +62,7 @@ public class Lineage<Element: Hashable> {
     
     /// Truncates 'element' if it is a leaf
     func prune(element: Element) -> Element? {
-        guard let node = node(element) else { return nil }
+        guard let node = node(for: element) else { return nil }
         guard node.isLeaf else { return nil }
         node.parent?.children.remove(node)
         node.parent = nil
@@ -71,8 +71,8 @@ public class Lineage<Element: Hashable> {
     }
     
     /// Path is from 'element' -> 'root'
-    func rootPath(element: Element) -> [Element] {
-        guard let node = node(element) else { return [] }
+    func rootPath(from element: Element) -> [Element] {
+        guard let node = node(for: element) else { return [] }
         if node.isOrigin { return [node.element] }
         
         var result: [Element] = [node.element]
@@ -89,11 +89,11 @@ public class Lineage<Element: Hashable> {
         return children.flatMap{ $0.leaves }
     }
     
-    private func node(element: Element) -> Lineage? {
+    private func node(for element: Element) -> Lineage? {
         if self.element == element { return self }
         
         for c in children {
-            if let node = c.node(element) {
+            if let node = c.node(for: element) {
                 return node
             }
         }
