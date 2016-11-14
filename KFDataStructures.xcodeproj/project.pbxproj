@@ -13,6 +13,7 @@
 		76428A631C5419710090C8A6 /* QueueType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76428A621C5419710090C8A6 /* QueueType.swift */; };
 		76428A651C5419840090C8A6 /* UniqueQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76428A641C5419840090C8A6 /* UniqueQueue.swift */; };
 		76428A671C541A3B0090C8A6 /* Lineage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76428A661C541A3B0090C8A6 /* Lineage.swift */; };
+		7686F39A1DD9B9F300DCDDB3 /* BinarySearchTree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7686F3991DD9B9F300DCDDB3 /* BinarySearchTree.swift */; };
 		76C964E71B5850B2001D9E78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C964E61B5850B2001D9E78 /* AppDelegate.swift */; };
 		76C964E91B5850B2001D9E78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C964E81B5850B2001D9E78 /* ViewController.swift */; };
 		76C964EC1B5850B2001D9E78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76C964EA1B5850B2001D9E78 /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 		76428A621C5419710090C8A6 /* QueueType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueType.swift; sourceTree = "<group>"; };
 		76428A641C5419840090C8A6 /* UniqueQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniqueQueue.swift; sourceTree = "<group>"; };
 		76428A661C541A3B0090C8A6 /* Lineage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lineage.swift; sourceTree = "<group>"; };
+		7686F3991DD9B9F300DCDDB3 /* BinarySearchTree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinarySearchTree.swift; sourceTree = "<group>"; };
 		76C964E11B5850B2001D9E78 /* KFDataStructures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KFDataStructures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76C964E51B5850B2001D9E78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76C964E61B5850B2001D9E78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				76428A621C5419710090C8A6 /* QueueType.swift */,
 				76428A641C5419840090C8A6 /* UniqueQueue.swift */,
 				76428A661C541A3B0090C8A6 /* Lineage.swift */,
+				7686F3991DD9B9F300DCDDB3 /* BinarySearchTree.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			files = (
 				76428A671C541A3B0090C8A6 /* Lineage.swift in Sources */,
 				76C965091B5850F1001D9E78 /* README.md in Sources */,
+				7686F39A1DD9B9F300DCDDB3 /* BinarySearchTree.swift in Sources */,
 				76428A631C5419710090C8A6 /* QueueType.swift in Sources */,
 				76428A5D1C5419190090C8A6 /* Heap.swift in Sources */,
 				76C965111B58513B001D9E78 /* KFTreeMap.m in Sources */,
