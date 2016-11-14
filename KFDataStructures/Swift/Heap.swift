@@ -32,6 +32,12 @@ public struct Heap<Element: Equatable> {
     }
 }
 
+extension Heap: Sequence, IteratorProtocol {
+    public mutating func next() -> Element? {
+        return pop()
+    }
+}
+
 extension Heap {
     fileprivate mutating func swimHeap(index: Int) {
         var index = index
