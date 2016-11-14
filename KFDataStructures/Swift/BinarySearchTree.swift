@@ -21,7 +21,37 @@ public class BinarySearchTree<T: Comparable> {
     }
 }
 
-public enum BinarySearchTreeTraversalOrder {
+extension BinarySearchTree: Sequence {
+    public func makeIterator() -> BinarySearchTreeInOrderIterator<T> {
+        return BinarySearchTreeInOrderIterator(tree: self)
+    }
+}
+
+/// Performance: O(h) extra memory required to store the stack, where h == height of tree
+public struct BinarySearchTreeInOrderIterator<T: Comparable>: IteratorProtocol {
+    private var current: BinarySearchNode<T>?
+    private var stack: ContiguousArray<BinarySearchNode<T>>
+    
+    init(tree: BinarySearchTree<T>) {
+        current = tree.root
+        stack = ContiguousArray()
+    }
+    
+    mutating public func next() -> T? {
+        while current != nil {
+            stack.append(current!)
+            current = current?.left
+        }
+        
+        guard !stack.isEmpty else { return nil }
+        current = stack.removeLast()
+        let result = current?.value
+        current = current?.right
+        return result
+    }
+}
+
+/*public enum BinarySearchTreeTraversalOrder {
     //In-order (or depth-first): first look at the left child of a node, then at the node itself, and finally at its right child.
     case inOrder
     
@@ -30,7 +60,7 @@ public enum BinarySearchTreeTraversalOrder {
     
     //Post-order: first look at the left and right children and process the node itself last.
     case postOrder
-}
+}*/
 
 /// Find Items
 extension BinarySearchTree {
@@ -55,10 +85,9 @@ extension BinarySearchTree {
         return root?.max().value
     }
     
-    
-    public func traverse(order: BinarySearchTreeTraversalOrder, callback: (T) -> Void) {
+    /*public func traverse(order: BinarySearchTreeTraversalOrder, callback: (T) -> Void) {
         root?.traverse(order: order, callback: callback)
-    }
+    }*/
 }
 
 /// Inserting items
@@ -129,7 +158,7 @@ extension BinarySearchNode {
         return parent?.right === self
     }
     
-    fileprivate func traverse(order: BinarySearchTreeTraversalOrder, callback: (T) -> Void) {
+    /*fileprivate func traverse(order: BinarySearchTreeTraversalOrder, callback: (T) -> Void) {
         switch order {
         case .inOrder:
             traverse(inOrder: callback)
@@ -156,7 +185,7 @@ extension BinarySearchNode {
         left?.traverse(postOrder: callback)
         right?.traverse(postOrder: callback)
         callback(value)
-    }
+    }*/
 }
 
 /// Inserting items
